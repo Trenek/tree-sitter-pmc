@@ -11,7 +11,8 @@ vim.filetype.add {
   },
 }
 
-local root = vim.fs.root(vim.api.nvim_buf_get_name(0), { "grammar.js" })
+local buffname = debug.getinfo(1, 'S').source:sub(2)
+local root = vim.fs.root(buffname, { "grammar.js" })
 local parser_path = vim.fs.joinpath(root, "libtree-sitter-pmc.so")
 
 if vim.fn.filereadable(parser_path) == 0 then
