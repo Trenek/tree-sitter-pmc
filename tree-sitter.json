@@ -1,0 +1,38 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "pmc",
+      "camelcase": "pmc",
+      "title": "Przykladowa Maszyna Cyfrowa",
+      "scope": "source.pmc",
+      "file-types": [
+        "pmc"
+      ],
+      "injection-regex": "^pmc$",
+      "class-name": "TreeSitterPmc"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Assembler w domu",
+    "authors": [
+      {
+        "name": "Trenek"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/Trenek/tree-sitter-pmc"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
